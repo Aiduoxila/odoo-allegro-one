@@ -1,1 +1,16 @@
+<odoo>
+    <record id="view_allegro_settings_form" model="ir.ui.view">
+        <field name="name">allegro.settings.form</field>
+        <field name="model">allegro.settings</field>
+        <field name="arch" type="xml">
+            <form string="Allegro Settings">
+                <group>
+                    <field name="sync_mode" widget="radio"/>
+                    <field name="sync_frequency" attrs="{'invisible': [('sync_mode', '!=', 'periodic')]}"/>
+                    <field name="webhook_url" attrs="{'invisible': [('sync_mode', '!=', 'real_time')]}"/>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>
 
