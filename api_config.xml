@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <record id="allegro_api_config" model="ir.config_parameter">
+            <field name="key">allegro_api_access_token</field>
+            <field name="value">your_access_token_here</field>
+        </record>
+    </data>
+</odoo>
