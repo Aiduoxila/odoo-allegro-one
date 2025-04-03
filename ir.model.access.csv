@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_allegro_settings,access.allegro.settings,model_allegro_settings,,1,1,1,0
+access_allegro_sync_task,access.allegro.sync.task,model_allegro_sync_task,,1,1,0,0
