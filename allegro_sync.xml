@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_allegro_sync_tree" model="ir.ui.view">
+        <field name="name">allegro.sync.tree</field>
+        <field name="model">allegro.sync.task</field>
+        <field name="arch" type="xml">
+            <tree string="Sync Tasks">
+                <field name="name"/>
+                <field name="last_run"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
