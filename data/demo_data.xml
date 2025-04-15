@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Allegro API Configuration -->
+        <record id="demo_allegro_config" model="allegro.settings">
+            <field name="name">Demo Allegro Shop</field>
+            <field name="api_key">demo_api_key_123</field>
+            <field name="shop_id">demo_shop_123</field>
+            <field name="sync_mode">periodic</field>
+            <field name="sync_interval">60</field>
+            <field name="webhook_url">http://your-domain.com/allegro/webhook</field>
+            <field name="is_test_mode">True</field>
+        </record>
+
+        <!-- Demo Products -->
+        <record id="demo_product_1" model="product.template">
+            <field name="name">Demo Laptop</field>
+            <field name="list_price">999.99</field>
+            <field name="type">product</field>
+            <field name="default_code">DEMO-LAP-001</field>
+            <field name="description">High-performance laptop with latest specifications</field>
+        </record>
+
+        <record id="demo_product_2" model="product.template">
+            <field name="name">Demo Smartphone</field>
+            <field name="list_price">499.99</field>
+            <field name="type">product</field>
+            <field name="default_code">DEMO-PHN-001</field>
+            <field name="description">Latest smartphone with advanced features</field>
+        </record>
+
+        <!-- Demo Allegro Product Mappings -->
+        <record id="demo_allegro_product_1" model="allegro.product">
+            <field name="name">Demo Laptop</field>
+            <field name="product_id" ref="demo_product_1"/>
+            <field name="allegro_id">demo_allegro_123</field>
+            <field name="allegro_url">https://allegro.cz/demo-laptop</field>
+            <field name="sync_status">synced</field>
+        </record>
+
+        <record id="demo_allegro_product_2" model="allegro.product">
+            <field name="name">Demo Smartphone</field>
+            <field name="product_id" ref="demo_product_2"/>
+            <field name="allegro_id">demo_allegro_456</field>
+            <field name="allegro_url">https://allegro.cz/demo-smartphone</field>
+            <field name="sync_status">synced</field>
+        </record>
+
+        <!-- Demo Orders -->
+        <record id="demo_allegro_order_1" model="allegro.order">
+            <field name="name">DEMO-ORD-001</field>
+            <field name="allegro_order_id">demo_order_123</field>
+            <field name="customer_name">John Demo</field>
+            <field name="order_status">confirmed</field>
+            <field name="total_amount">999.99</field>
+            <field name="order_date" eval="time.strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>
